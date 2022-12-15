@@ -9,28 +9,28 @@ public class Menu {
 	Scanner sc = new Scanner(System.in);
 	
 	//Desportivos
-	Desportivo ferrari812 = new Desportivo("Ferrari", "812 Superfast", "Automática/Sequencial de 7 velocidades", "6.5 V12 N/A", 800, 2, 2, 2300, true, 0);
-	Desportivo porsche992 = new Desportivo("Porsche", "911 (992) Turbo S", "Automática/Sequencial de 8 velocidades", "3.8 Boxer 6 Turbo", 641, 4, 2, 2200, true, 0);
+	Desportivo ferrari812 = new Desportivo("Ferrari", "812 Superfast", "Automática/Sequencial de 7 velocidades", "6.5 V12 N/A", 800, 2, 2, 2300, true, 0, 2.9);
+	Desportivo porsche992 = new Desportivo("Porsche", "911 (992) Turbo S", "Automática/Sequencial de 8 velocidades", "3.8 Boxer 6 Turbo", 641, 4, 2, 2200, true, 0, 2.5);
 	
 	// Eléctricos
-	Electrico kiaEv6 = new Electrico("Kia", "EV6", "Automática de 1 velocidade", "2 motores elétricos", 321, 5, 5, 1200, true, 0);
-	Electrico miniElectric = new Electrico("Mini", "Electric", "Automática de 1 velocidade", "1 motor eléctrico", 181, 4, 3, 1000, true, 0);
+	Electrico kiaEv6 = new Electrico("Kia", "EV6", "Automática de 1 velocidade", "2 motores elétricos", 321, 5, 5, 1200, true, 0, 740);
+	Electrico miniElectric = new Electrico("Mini", "Electric", "Automática de 1 velocidade", "1 motor eléctrico", 181, 4, 3, 1000, true, 0, 230);
 	
 	//Luxo
-	Luxo bentleyContinental = new Luxo("Bentley", "Continental GT", "Automática/Sequencial de 8 velocidades", "6.0 W12 Twin-turbo", 650, 2, 4, 2800, true, 0);
-	Luxo rollsRoyceGhost = new Luxo("Rolls-Royce", "Ghost", "Automática de 8 velocidades", "6.7 V12 Twin-Turbo", 563, 4, 4, 3000, true, 0);
+	Luxo bentleyContinental = new Luxo("Bentley", "Continental GT", "Automática/Sequencial de 8 velocidades", "6.0 W12 Twin-turbo", 650, 2, 4, 2800, true, 0, "Não");
+	Luxo rollsRoyceGhost = new Luxo("Rolls-Royce", "Ghost", "Automática de 8 velocidades", "6.7 V12 Twin-Turbo", 563, 4, 4, 3000, true, 0, "Sim");
 	
 	//Utilitários
-	Utilitario vwGolf = new Utilitario("Volkswagen", "Golf 7 1.4 TSI ", "Manual", "1.4 TSI", 122, 5, 5, 1000, true, 0);
-	Utilitario fordFiesta = new Utilitario("Ford", "Fiesta", "Manual", "1.0", 100, 5, 4, 100, true, 0);
+	Utilitario vwGolf = new Utilitario("Volkswagen", "Golf 7 1.4 TSI ", "Manual", "1.4 TSI", 122, 5, 5, 1000, true, 0, 6.0);
+	Utilitario fordFiesta = new Utilitario("Ford", "Fiesta", "Manual", "1.0", 100, 5, 4, 100, true, 0, 5.4);
 	
 	//SUV
-	Suv mercedesGle = new Suv("Mercedes", "GLE", "Automática", "2.0", 255, 5, 4, 300, true, 0);
-    Suv volvoXc90 = new Suv("Volvo", "XC90", "Automática", "2.0", 235, 5, 4, 300, true, 0);
+	Suv mercedesGle = new Suv("Mercedes", "GLE", "Automática", "2.0", 255, 5, 4, 300, true, 0, "RWD");
+    Suv volvoXc90 = new Suv("Volvo", "XC90", "Automática", "2.0", 235, 5, 4, 300, true, 0, "AWD");
     
     //Familiar
-    Familiar mercedesC200 = new Familiar("Mercedes", "C200D", "Automática", "2.0", 163, 5, 4, 400, true, 0);
-    Familiar fordFocus = new Familiar("Ford", "Focus", "Manual", "1.6", 123, 5, 4, 250, true, 0);
+    Familiar mercedesC200 = new Familiar("Mercedes", "C200D", "Automática", "2.0", 163, 5, 4, 400, true, 0, 460);
+    Familiar fordFocus = new Familiar("Ford", "Focus", "Manual", "1.6", 123, 5, 4, 250, true, 0, 608);
     
     //SuperDesportivas
     Mota r1 = new Mota("Yamaha", "YZF R1M", "manual", "A", 2, 998, 198, 200, true, 0);
@@ -69,6 +69,7 @@ public class Menu {
 					System.out.println("Caixa: " + ferrari812.tipoCaixa);
 					System.out.println("Número de portas: " + ferrari812.numPortas);
 					System.out.println("Número de lugares: " + ferrari812.numLugares);
+					System.out.println("Aceleração: " + ferrari812.aceleracao + " s");
 					System.out.println("Preço: " + ferrari812.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -130,6 +131,7 @@ public class Menu {
 					System.out.println("Caixa: " + porsche992.tipoCaixa);
 					System.out.println("Número de portas: " + porsche992.numPortas);
 					System.out.println("Número de lugares: " + porsche992.numLugares);
+					System.out.println("Aceleração: " + porsche992.aceleracao + " s");
 					System.out.println("Preço: " + porsche992.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -199,6 +201,7 @@ public class Menu {
 					System.out.println("Caixa: " + kiaEv6.tipoCaixa);
 					System.out.println("Número de portas: " + kiaEv6.numPortas);
 					System.out.println("Número de lugares: " + kiaEv6.numLugares);
+					System.out.println("Autonomina: " + kiaEv6.autonomia + " km");
 					System.out.println("Preço: " + kiaEv6.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -257,6 +260,7 @@ public class Menu {
 					System.out.println("Caixa: " + miniElectric.tipoCaixa);
 					System.out.println("Número de portas: " + miniElectric.numPortas);
 					System.out.println("Número de lugares: " + miniElectric.numLugares);
+					System.out.println("Autonomina: " + miniElectric.autonomia + " km");
 					System.out.println("Preço: " + miniElectric.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -324,6 +328,7 @@ public class Menu {
 					System.out.println("Caixa: " + bentleyContinental.tipoCaixa);
 					System.out.println("Número de portas: " + bentleyContinental.numPortas);
 					System.out.println("Número de lugares: " + bentleyContinental.numLugares);
+					System.out.println("Cancelamento de som exterior: " + bentleyContinental.noiseCanceling);
 					System.out.println("Preço: " + bentleyContinental.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -382,6 +387,7 @@ public class Menu {
 					System.out.println("Caixa: " + rollsRoyceGhost.tipoCaixa);
 					System.out.println("Número de portas: " + rollsRoyceGhost.numPortas);
 					System.out.println("Número de lugares: " + rollsRoyceGhost.numLugares);
+					System.out.println("Cancelamento de som exterior: " + rollsRoyceGhost.noiseCanceling);
 					System.out.println("Preço: " + rollsRoyceGhost.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -442,13 +448,14 @@ public class Menu {
 				apresentarCarros(idade);
 				break;
 			case 1:
-				if (kiaEv6.isAvailable == true) {
+				if (vwGolf.isAvailable == true) {
 					System.out.println("--- " + vwGolf.marca + " " + vwGolf.modelo + " ---");
 					System.out.println("Motor: " + vwGolf.tipoMotor);
 					System.out.println("Potência: " + vwGolf.potencia + "cv");
 					System.out.println("Caixa: " + vwGolf.tipoCaixa);
 					System.out.println("Número de portas: " + vwGolf.numPortas);
 					System.out.println("Número de lugares: " + vwGolf.numLugares);
+					System.out.println("Consumos: " + vwGolf.consumos + " L/100km");
 					System.out.println("Preço: " + vwGolf.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -507,6 +514,7 @@ public class Menu {
 					System.out.println("Caixa: " + fordFiesta.tipoCaixa);
 					System.out.println("Número de portas: " + fordFiesta.numPortas);
 					System.out.println("Número de lugares: " + fordFiesta.numLugares);
+					System.out.println("Consumos: " + fordFiesta.consumos + " L/100km");
 					System.out.println("Preço: " + fordFiesta.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -574,6 +582,7 @@ public class Menu {
 					System.out.println("Caixa: " + mercedesC200.tipoCaixa);
 					System.out.println("Número de portas: " + mercedesC200.numPortas);
 					System.out.println("Número de lugares: " + mercedesC200.numLugares);
+					System.out.println("Capacidade da bagageira: " + mercedesC200.bagageira + " L");
 					System.out.println("Preço: " + mercedesC200.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -632,6 +641,7 @@ public class Menu {
 					System.out.println("Caixa: " + fordFocus.tipoCaixa);
 					System.out.println("Número de portas: " + fordFocus.numPortas);
 					System.out.println("Número de lugares: " + fordFocus.numLugares);
+					System.out.println("Capacidade da bagageira: " + fordFocus.bagageira + " L");
 					System.out.println("Preço: " + fordFocus.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -699,6 +709,7 @@ public class Menu {
 					System.out.println("Caixa: " + mercedesGle.tipoCaixa);
 					System.out.println("Número de portas: " + mercedesGle.numPortas);
 					System.out.println("Número de lugares: " + mercedesGle.numLugares);
+					System.out.println("Tipo de tração: " + mercedesGle.tipoTracao);
 					System.out.println("Preço: " + mercedesGle.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -757,6 +768,7 @@ public class Menu {
 					System.out.println("Caixa: " + volvoXc90.tipoCaixa);
 					System.out.println("Número de portas: " + volvoXc90.numPortas);
 					System.out.println("Número de lugares: " + volvoXc90.numLugares);
+					System.out.println("Tipo de tração: " + volvoXc90.tipoTracao);
 					System.out.println("Preço: " + volvoXc90.precoRenting + " €/dia");
 					System.out.println("Alugar?\n1 - Sim\n0 - Voltar atrás");
 					int alugar = sc.nextInt();
@@ -820,6 +832,7 @@ public class Menu {
     				case 0:
     					showMenu();
     					repeat = false;
+    					break;
     				case 1:
     					apresentarDesportivos(idade);
     					repeat = false;
@@ -847,14 +860,16 @@ public class Menu {
     				default:
     					System.out.println("Opção não válida, volte a tentar");
     			}
-    			
-    			//repeat = false;
     		}
     		else {
-    			System.out.println("1 - Eléctrico\n2 - Utilitário\n3 - Familiar\n4 - SUV");
+    			System.out.println("1 - Eléctrico\n2 - Utilitário\n3 - Familiar\n4 - SUV\n0 - Voltar atrás");
     			int input = sc.nextInt();
     			
     			switch(input) {
+    				case 0:
+    					showMenu();
+    					repeat = false;
+    					break;
     				case 1:
     					apresentarElectricos(idade);
     					repeat = false;
@@ -1597,7 +1612,7 @@ public class Menu {
 	    				repeat = false;
 	            		break;
 	    			case 2:
-	    				//apresentarScooter(idade);
+	    				apresentarScooter(licenca);
 	    				repeat = false;
 	            		break;
 	    			default:
@@ -1614,7 +1629,7 @@ public class Menu {
 	    				repeat = false;
 	            		break;
 	    			case 1:
-	    				//apresentarScooter(idade);
+	    				apresentarScooter(licenca);
 	    				repeat = false;
 	            		break;
 	            	default:
@@ -1639,10 +1654,12 @@ public class Menu {
 				System.out.println("Escolha uma das seguintes opções:\n1 - Alugar um automóvel\n2 - Alugar uma mota\n3 - Concluir o Aluguer\n0 - Voltar a inserir idade");
 				int input = sc.nextInt();
 				
-				switch(input) {
+				while(repeat == true) {
+					switch(input) {
 					case 0:
 						System.out.println("Insira a idade atualizada: ");
 						idade = sc.nextInt();
+						showMenu();
 						break;
 					case 1:
 						apresentarCarros(idade);
@@ -1653,6 +1670,7 @@ public class Menu {
 						repeat = false;
 						break;
 					case 3:
+				
 						if (total == 0) {
 							System.out.println("Não tem nada que pretenda alugar atualmente");
 							showMenu();
@@ -1680,8 +1698,9 @@ public class Menu {
 							
 						}
 					default:
-						System.out.println("Opção não válida, volte a tentar");
+						System.out.println("Opção não válida, volte a tentar\n");
 						break;
+				}
 				}
 				break;
 			}
